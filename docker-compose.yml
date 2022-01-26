@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sample:
+    container_name: helloworldtest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - "127.0.0.1:8081:8081"
